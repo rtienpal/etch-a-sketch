@@ -12,11 +12,24 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body>
+  <!-- this prevents drag on whole body-->
+  <body ondragstart="return false;" ondrop="return false;">
     <section id="header">Etch-a-Sketch</section>
 
     <section id="main">
       <div id="grid"></div>
+
+      <div id="options">
+        <button onclick="changeColor('black')">Black</button>
+        <button onclick="changeColor('white')">White</button>
+        <button onclick="changeColor('random')">Random</button>
+        <button onclick="resetSquareColors()">Reset</button>
+        <div id="gridsize">
+        <input type="text" placeholder="Size of Grid (1-100)" value="16" onchange="changeSquares(this.value)">
+        <p id="gridsizetext"></p>
+      </div>
+    </div>
+    </section>
 
     <section id="footer">Copyright © 2022 Rafael Uen <a href="https://github.com/rtienpal/" target="_blank">
       <i class="fab fa-github"></i
