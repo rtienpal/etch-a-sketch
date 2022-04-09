@@ -19,7 +19,6 @@ body {
   flex-direction: column;
   background-color: var(--primary-dark);
   color: var(--primary-light);
-  
 }
 
 #header {
@@ -32,17 +31,65 @@ body {
 }
 
 #main {
-  display:flex;
-  flex-direction: column;
+  display: flex;
   align-items: center;
   justify-content: center;
+  gap: 50px;
   padding: 10px;
-  align-self: stretch;
-  gap: 20px;
 }
 
 #options {
   display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+  justify-content: space-around;
+}
+
+#colorpicker {
+  width: 100%;
+}
+
+button {
+  display: flex;
+  background-color: var(--primary-dark);
+  color: var(--primary-light);
+  border: 1px;
+  border-color: var(--primary-light);
+  border-style: solid;
+  border-radius: 3px;
+  padding: 5px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.btn-off {
+  display: flex;
+  background-color: var(--primary-dark);
+  color: var(--primary-light);
+  border: 1px;
+  border-color: var(--primary-light);
+  border-style: solid;
+  border-radius: 3px;
+  padding: 5px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-on {
+  color: var(--primary-dark);
+  background-color: var(--primary-light);
+  border-color: var(--primary-dark);
+  border: 1px;
+  border-style: solid;
+  border-radius: 3px;
+  padding: 5px;
 }
 
 #grid {
@@ -57,26 +104,23 @@ body {
 
 @media (max-width: 550px) {
   #grid {
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
+  }
+
+  #main {
+    gap: 20px;
+    padding: 5px;
+  }
+
+  #options {
+    width: 60px;
+  }
+
+  #sizeslider {
+    width: 50px;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #footer {
   position: absolute;
